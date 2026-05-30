@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=ZCOOL+XiaoWei&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a0e17;
+  --bg-secondary: #111827;
+  --bg-card: rgba(17, 24, 39, 0.8);
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --accent-gold: #c9a96e;
+  --accent-gold-light: #d4b87a;
+  --accent-green: #4ade80;
+  --accent-red: #ef4444;
+  --accent-blue: #6366f1;
+  --border-color: rgba(201, 169, 110, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.font-display {
+  font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.glass {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+}
+
+.glass-hover:hover {
+  background: rgba(17, 24, 39, 0.9);
+  border-color: rgba(201, 169, 110, 0.4);
+}
+
+.gold-glow {
+  box-shadow: 0 0 20px rgba(201, 169, 110, 0.15);
+}
+
+.gold-glow-strong {
+  box-shadow: 0 0 30px rgba(201, 169, 110, 0.3);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(201, 169, 110, 0.3);
+  border-radius: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 169, 110, 0.5);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 8px rgba(201, 169, 110, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(201, 169, 110, 0.4); }
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s ease-in-out infinite;
+}
+
+.ink-bg {
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(201, 169, 110, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(74, 222, 128, 0.02) 0%, transparent 50%);
+}
